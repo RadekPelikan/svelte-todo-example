@@ -1,8 +1,19 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/button.svelte';
+	import Todo from '$lib/components/core/Todo.svelte';
+	import { todos } from './tasks.svelte';
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
-
-<Button variant="outline">Button</Button>
+<section>
+	<div class="mx-auto w-[50rem]">
+		<!-- <pre>
+{JSON.stringify(tasks, null, 2)}
+		</pre> -->
+		<h2 class="text-2x">Tasks</h2>
+		<div class="grid gap-2">
+			{#each todos as todo (todo.id)}
+				<Todo {todo} />
+			{/each}
+		</div>
+	</div>
+</section>

@@ -6,9 +6,9 @@
 
 <section>
 	<div class="mx-auto w-[50rem]">
-		<!-- <pre>
-{JSON.stringify(tasks, null, 2)}
-		</pre> -->
+		<pre>
+{JSON.stringify(todos, null, 2)}
+		</pre>
 		<h2 class="text-2x">Tasks</h2>
 		<div class="grid gap-2">
 			{#each todos as todo (todo.id)}
